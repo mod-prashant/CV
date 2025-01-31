@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Resume</title>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
     <noscript>
@@ -23,24 +26,78 @@
         }
       </style>
     </noscript>
+    <style>
+      /* Dark mode styles */
+      body.dark-mode {
+          background-color: #121212;
+          color: #e0e0e0;
+      }
+      #darkModeToggle {
+          box-shadow: none !important;
+          border: 0.1rem solid #0241a6 !important;
+          border-radius: 40px !important;
+      }
+      #darkModeToggle.dark-mode {
+          border-color: #fcf149 !important;
+      }
+      .bi-moon-fill{ color: #0241a6;}
+      .bi-sun-fill{ color: #fcf149;}
+
+      #intro.dark-mode {
+          background-color: black !important;
+          color: #e0e0e0 !important;
+          box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2) !important;
+      }
+      #about.dark-mode {
+          background-color: black !important;
+          color: #e0e0e0 !important;
+          box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2) !important;
+      }
+      #skills.dark-mode {
+          background-color: black !important;
+          color: #e0e0e0 !important;
+          box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2) !important;
+      }
+      #education.dark-mode {
+          background-color: black !important;
+          color: #e0e0e0 !important;
+          box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2) !important;
+      }
+      #portfolio.dark-mode {
+          background-color: black !important;
+          color: #e0e0e0 !important;
+          box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2) !important;
+      }
+      #contact.dark-mode {
+          background-color: black !important;
+          color: #e0e0e0 !important;
+          box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2) !important;
+      }
+
+    </style>
   </head>
-  <body class="bg-light" id="top">
+  <body>
+    <!-- Header -->
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
-        <div class="pt-4 clearfix">
+        <div class="pt-4 clearfix ">
+          <!-- Site Title -->
           <h1 class="site-title mb-0">Prashant Uniyal</h1>
-          <div class="site-nav"> 
+          <!-- Navigation -->
+          <div class="site-nav">
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span class="menu-title">Portfolio</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a>
+                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a> </li>
+                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a> </li>
+                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a> </li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span class="menu-title">Portfolio</span></a> </li>
+                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a> </li>
+                <li>
+                  <!-- Dark Mode Toggle Button -->
+                  <button id="darkModeToggle" class="btn shadow-none mx-3" title=" Change Theme ">
+                    <!--  <i id="darkModeIcon" class="bi bi-moon"></i> -->
+                    <i id="darkModeIcon" class="bi bi-moon-fill"></i>
+                  </button>
                 </li>
               </ul>
             </nav>
@@ -48,248 +105,311 @@
         </div>
       </div>
     </header>
+
+
+    <!-- Main Page -->
     <div class="page-content">
       <div class="container">
-<div class="resume-container">
-  <div class="shadow-1-strong bg-white my-5" id="intro">
-    <div class="bg-info text-white">
-      <div class="cover bg-image"><img src="images/header-background.png"/>
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
-          <div class="text-center p-5">
-            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/Prashant.jpg" width="160" height="160"/></div>
-            <div class="header-bio mt-3">
-              <div data-aos="zoom-in" data-aos-delay="0">
-                <h2 class="h1">Prashant Uniyal</h2>
-                <p>Web Developer</p>
+        <div class="resume-container">
+          <!-- Intro -->
+          <div class="shadow-1-strong bg-white my-5" id="intro">
+            <div class="bg-info text-white">
+              <div class="cover bg-image"><img src="images/header-background.png"/>
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(2px);">
+                  <div class="text-center p-5">
+                    <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/Prashant.jpg" width="160" height="160"/></div>
+                    <div class="header-bio mt-3">
+                      <div data-aos="zoom-in" data-aos-delay="0">
+                        <h2 class="h1">Prashant Uniyal</h2>
+                        <p>Web Developer</p>
+                      </div>
+                      <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                        <nav role="navigation">
+                          <ul class="nav justify-content-center">
+                            <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/prashant-uniyal-9ab235273" title="Linkedin"><i class="fab fa-linkedin-in"></i><span class="menu-title sr-only">Linkedin</span></a>
+                            </li>
+                          <!--    <li class="nav-item"><a class="nav-link" href="https://www.freelancer.in/u/Prashant0Uniyal" title="Freelancer"><i class="fab fa-freelancer"></i><span class="menu-title sr-only">Freelancer</span></a>
+                            </li> -->
+                          <li class="nav-item"><a class="nav-link" href="https://github.com/mod-prashant" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                      <div class="d-print-none"><a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="PrashantUniyal_Resume.pdf" data-aos="fade-right" data-aos-delay="700">Download CV</a><a class="btn btn-info btn-lg shadow-sm mt-1" href="#contact" data-aos="fade-left" data-aos-delay="700">Hire Me</a></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
-                <nav role="navigation">
-                  <ul class="nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/prashant-uniyal-9ab235273" title="Linkedin"><i class="fab fa-linkedin-in"></i><span class="menu-title sr-only">Linkedin</span></a>
-                    </li>
-                  <!--    <li class="nav-item"><a class="nav-link" href="https://www.freelancer.in/u/Prashant0Uniyal" title="Freelancer"><i class="fab fa-freelancer"></i><span class="menu-title sr-only">Freelancer</span></a>
-                    </li> -->
-                  <li class="nav-item"><a class="nav-link" href="https://github.com/mod-prashant" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
-                    </li> 
-                  </ul>
-                </nav>
+            </div>
+          </div>
+          <!-- About -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="about">
+            <div class="about-section">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2 class="h2 fw-light mb-4">About Me</h2>
+                  <p>Hello! I’m Prashant Uniyal. I'm an aspiring web developer with a passion for creating captivating online experiences. My journey began with mastering the essentials of HTML, CSS, and JavaScript. I thrive on creative problem-solving and am committed to crafting user-friendly websites.</p>
+                  <p> I'm excited to embark on this dynamic career path, eager to learn, and ready to contribute my skills to your web development projects.</p>
+                </div>
+                <div class="col-md-5 offset-lg-1">
+                  <div class="row mt-2">
+                    <h2 class="h2 fw-light mb-4">Bio</h2>
+                    <div class="col-sm-5">
+                      <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Age</div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="pb-2">21</div>
+                    </div>
+                    <div class="col-sm-5">
+                      <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="pb-2">prashantuniyal2002@gmail.com</div>
+                    </div>
+                    <div class="col-sm-5">
+                      <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="pb-2">+91 8860154387</div>
+                    </div>
+                    <div class="col-sm-5">
+                      <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="pb-2">GTB Nagar, Delhi-09, India</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="d-print-none"><a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="material-resume.pdf" data-aos="fade-right" data-aos-delay="700">Download CV</a><a class="btn btn-info btn-lg shadow-sm mt-1" href="#contact" data-aos="fade-left" data-aos-delay="700">Hire Me</a></div>
+            </div>
+          </div>
+          <!-- Skills -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
+            <div class="skills-section">
+              <h2 class="h2 fw-light mb-4">Professional Skills</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3"><span class="fw-bolder">HTML</span>
+                    <div class="progress my-2 rounded" style="height: 20px">
+                      <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Advance</div>
+                    </div>
+                  </div>
+                  <div class="mb-3"><span class="fw-bolder">CSS</span>
+                    <div class="progress my-2 rounded" style="height: 20px">
+                      <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="200" data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Advance</div>
+                    </div>
+                  </div>
+                  <div class="mb-3"><span class="fw-bolder">JavaScript</span>
+                    <div class="progress my-2 rounded" style="height: 20px">
+                      <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
+                    </div>
+                  </div>
+                  <div class="mb-3"><span class="fw-bolder">WordPress</span>
+                    <div class="progress my-2 rounded" style="height: 20px">
+                      <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3"><span class="fw-bolder">PHP</span>
+                    <div class="progress my-2 rounded" style="height: 20px">
+                      <div class="progress-bar bg-secondary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
+                    </div>
+                  </div>
+                  <div class="mb-3"><span class="fw-bolder">MySQL</span>
+                    <div class="progress my-2 rounded" style="height: 20px">
+                      <div class="progress-bar bg-secondary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
+                    </div>
+                  </div>
+                  <div class="mb-3"><span class="fw-bolder">Jquery</span>
+                    <div class="progress my-2 rounded" style="height: 20px">
+                      <div class="progress-bar bg-secondary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="500" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Beginner</div>
+                    </div>
+                  </div>
+                  <div class="mb-3"><span class="fw-bolder">Joomla</span>
+                    <div class="progress my-2 rounded" style="height: 20px">
+                      <div class="progress-bar bg-secondary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Beginner</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Education -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="education">
+            <div class="education-section">
+              <h2 class="h2 fw-light mb-4">Education</h2>
+              <!-- timelime -->
+              <div class="timeline">
+                <!-- Oxford (web development) -->
+                <div class="timeline-card timeline-card-primary" data-aos="fade-in" data-aos-delay="200">
+                    <div class="timeline-head px-4 pt-3">
+                      <div class="h5">Web-Developer Course <span class="text-muted h6">from Oxford software Institute, Delhi, India</span>          </div>
+                    </div>
+                    <div class="timeline-body px-4 pb-4">
+                      <div class="text-muted text-small mb-3">Sep 2021 - Sep 2022</div>
+                      <div>
+                        <br><strong>Date of issue:-</strong>
+                        <br>23-March-2023
+                        <br><strong>Issued By:-</strong>
+                        <br>Hindustan Soft Education Limited, Delhi
+                        <br><strong>Core Module:-</strong>
+                        HTML5, CSS3, PHP, MySQL, Jquery, WordPress, Joomla
+                      </div>
+                    </div>
+                  </div>
+                <!-- college -->
+                <div class="timeline-card timeline-card-primary" data-aos="fade-in" data-aos-delay="200">
+                    <div class="timeline-head px-4 pt-3">
+                      <div class="h5">Bachelor of Computer Applications <span class="text-muted h6">from Indira Gandhi National Open University, India</span>          </div>
+                    </div>
+                    <div class="timeline-body px-4 pb-4">
+                      <div class="text-muted text-small mb-3">2020 -</div>
+                  </div>
+                </div>
+                <!-- School -->
+                <div class="timeline-card timeline-card-primary" data-aos="fade-in" data-aos-delay="400">
+                    <div class="timeline-head px-4 pt-3">
+                      <div class="h5">School <span class="text-muted h6">from Guru Harkrishan Public School, Nanak Piao, Delhi, India</span>          </div>
+                    </div>
+                    <div class="timeline-body px-4 pb-4">
+                      <div class="text-muted text-small mb-3"> - 2020</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio -->
+          <div class="shadow-1-strong bg-white my-5 p-5  d-print-none" id="portfolio">
+            <div class="portfolio-section">
+              <h2 class="h2 fw-light mb-4">Portfolio</h2>
+              <!-- to-do-list -->
+              <div class="row g-0">
+                <!-- thumbnail -->
+                <div class="col-md-6">
+                  <a href="https://github.com/mod-prashant/to-do-list" target="_blank"><img class="img-fluid" src="images/to-do-list.png" width="800" height="500"/></a>
+                </div>
+                <!-- content -->
+                <div class="col-md-6 d-flex align-items-left" data-aos="fade-left" data-aos-delay="100">
+                  <div class="m-4 mt-md-2">
+                    <p class="text-teal text-small">HTML / CSS</p>
+                    <h3>To-Do-List</h3>
+                    <p class="text-muted">Built for practice. Delivered codebase in HTML & CSS.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Woordpress webstore -->
+              <div class="row g-0 ">
+                <!-- content -->
+                <div class="col-md-6 d-flex align-items-right" data-aos="fade-right" data-aos-delay="100">
+                  <div class="m-4 mt-md-2 text-end">
+                    <p class="text-teal text-small">WordPress / woocommerce</p>
+                    <h3>Clothing & Accessaries Web-Store</h3>
+                    <p class="text-muted">Web-Store for selling Clothing & Accessaries. Made with WordPress.</p>
+                  </div>
+                </div>
+                <!-- thumbnail -->
+                <div class="col-md-6">
+                  <a href="https://prashant-shop.kesug.com" target="_blank"><img class="img-fluid" src="images/mystyle.png" width="800" height="500"/></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
+            <div class="contant-section">
+              <!-- Heading -->
+              <h2 class="h2 fw-light mb-4">Contact</h2>
+              <!-- Content -->
+              <div class="row mb-4">
+                <!-- Contact (Content)-->
+                <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
+                  <!-- Contact Details -->
+                  <div class="mt-1">
+                    <div class="h6"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> +91 8860154387</div>
+                    <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> prashantuniyal2002@gmail.com</div>
+                  </div>
+                  <!-- Contact Form -->
+                  <div class="mt-5 d-print-none">
+                    <form action="https://formspree.io/prashantuniyal2002@gmail.com" method="POST">
+                      <div class="form-outline mb-4">
+                        <input type="text" id="name" class="form-control" required/>
+                        <label class="form-label" for="name">Name</label>
+                      </div>
+                      <div class="form-outline mb-4">
+                        <input type="email" id="email" class="form-control" required/>
+                        <label class="form-label" for="email">Email address</label>
+                      </div>
+                      <div class="form-outline mb-4">
+                        <textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
+                        <label class="form-label" for="message">Message</label>
+                      </div>
+                      <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
+                    </form>
+                  </div>
+                </div>
+                <!-- Contact (Map)-->
+                <div class="col-md-7 d-print-none" data-aos="zoom-in" data-aos-delay="100">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6999.388162882664!2d77.19887669165045!3d28.698796413410932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdedf3f4cb07%3A0x714827a17f46f858!2sGTB%20Nagar%2C%20Delhi%2C%20110009!5e0!3m2!1sen!2sin!4v1696774585334!5m2!1sen!2sin" width="500" height="400" style="border:0;width:100%;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="shadow-1-strong bg-white my-5 p-5" id="about">
-    <div class="about-section">
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="h2 fw-light mb-4">About Me</h2>
-          <p>Hello! I’m Prashant Uniyal. I'm an aspiring web developer with a passion for creating captivating online experiences. My journey began with mastering the essentials of HTML, CSS, and JavaScript. I thrive on creative problem-solving and am committed to crafting user-friendly websites.</p>
-          <p> I'm excited to embark on this dynamic career path, eager to learn, and ready to contribute my skills to your web development projects.</p>
-        </div>
-        <div class="col-md-5 offset-lg-1">
-          <div class="row mt-2">
-            <h2 class="h2 fw-light mb-4">Bio</h2>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Age</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">21</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">prashantuniyal2002@gmail.com</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">+91 8860154387</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">GTB Nagar, Delhi-09, India</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
-    <div class="skills-section">
-      <h2 class="h2 fw-light mb-4">Professional Skills</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="mb-3"><span class="fw-bolder">HTML</span>
-            <div class="progress my-2 rounded" style="height: 20px">
-              <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Advance</div>
-            </div>
-          </div>
-          <div class="mb-3"><span class="fw-bolder">CSS</span>
-            <div class="progress my-2 rounded" style="height: 20px">
-              <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="200" data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Advance</div>
-            </div>
-          </div>
-          <div class="mb-3"><span class="fw-bolder">JavaScript</span>
-            <div class="progress my-2 rounded" style="height: 20px">
-              <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
-            </div>
-          </div>
-          <div class="mb-3"><span class="fw-bolder">WordPress</span>
-            <div class="progress my-2 rounded" style="height: 20px">
-              <div class="progress-bar bg-info" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="mb-3"><span class="fw-bolder">PHP</span>
-            <div class="progress my-2 rounded" style="height: 20px">
-              <div class="progress-bar bg-secondary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
-            </div>
-          </div>
-          <div class="mb-3"><span class="fw-bolder">MySQL</span>
-            <div class="progress my-2 rounded" style="height: 20px">
-              <div class="progress-bar bg-secondary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="400" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Advance</div>
-            </div>
-          </div>
-          <div class="mb-3"><span class="fw-bolder">Jquery</span>
-            <div class="progress my-2 rounded" style="height: 20px">
-              <div class="progress-bar bg-secondary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="500" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Beginner</div>
-            </div>
-          </div>
-          <div class="mb-3"><span class="fw-bolder">Joomla</span>
-            <div class="progress my-2 rounded" style="height: 20px">
-              <div class="progress-bar bg-secondary" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Beginner</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="shadow-1-strong bg-white my-5 p-5" id="education">
-    <div class="education-section">
-      <h2 class="h2 fw-light mb-4">Education</h2>
-      <div class="timeline">
-          <div class="timeline-head px-4 pt-3">
-            <div class="h5">Web-Developer Course <span class="text-muted h6">from Oxford software Institute, Delhi, India</span>          </div>
-          </div>
-          <div class="timeline-body px-4 pb-4">
-            <div class="text-muted text-small mb-3">Sep 2021 - Sep 2022</div>
-            <div>
-              <br><strong>Date of issue:-</strong>
-              <br>23-March-2023
-              <br><strong>Issued By:-</strong>
-              <br>Hindustan Soft Education Limited, Delhi
-              <br><strong>Core Module:-</strong>
-              HTML5, CSS3, PHP, MySQL, Jquery, WordPress, Joomla
-            </div>
-          </div>
-        <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="200">
-          <div class="timeline-head px-4 pt-3">
-            <div class="h5">Bachelor of Computer Applications <span class="text-muted h6">from Indira Gandhi National Open University, India</span>          </div>
-          </div>
-          <div class="timeline-body px-4 pb-4">
-            <div class="text-muted text-small mb-3">2020 -</div>
-        </div>
-        <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="400">
-          <div class="timeline-head px-4 pt-3">
-            <div class="h5">School <span class="text-muted h6">from Guru Harkrishan Public School, Nanak Piao, Delhi, India</span>          </div>
-          </div>
-          <div class="timeline-body px-4 pb-4">
-            <div class="text-muted text-small mb-3"> - 2020</div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio">
-    <div class="portfolio-section">
-      <h2 class="h2 fw-light mb-4">Portfolio</h2>
-      <div class="row g-0">
-        <div class="col-md-6"><a href="https://mod-prashant.github.io/to-do-list/" target="_blank"><img class="img-fluid" src="images/to-do-list.png" width="800" height="500"/></a></div>
-        <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
-          <div class="m-4 mt-md-2">
-            <p class="text-teal text-small">HTML / CSS</p>
-            <h3>To-Do-List</h3>
-            <p class="text-muted">Built for practice. Delivered codebase in HTML & CSS.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row g-0 portfolio-reverse">
-        <div class="col-md-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-          <div class="m-4 mt-md-2 text-end">
-            <p class="text-teal text-small">WordPress / woocommerce</p>
-            <h3>Clothing & Accessaries Web-Store</h3>
-            <p class="text-muted">Web-Store for selling Clothing & Accessaries. Made with WordPress.</p>
-          </div>
-        </div>
-        <div class="col-md-6"><a href="https://prashant-shop.kesug.com" target="_blank"><img class="img-fluid" src="images/mystyle.png" width="800" height="500"/></a></div>
-      </div>
-    </div>
-  </div>
-  <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
-    <div class="contant-section">
-      <h2 class="h2 fw-light text mb-4">Contact</h2>
-      <div class="row mb-4">
-        <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
-          <div class="mt-1">
-            <div class="h6"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> +91 8860154387</div>
-            <div class="h6"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> prashantuniyal2002@gmail.com</div>
-          </div>
-          <div class="mt-5 d-print-none"><form action="https://formspree.io/prashantuniyal2002@gmail.com"
-    method="POST">
-  <div class="form-outline mb-4">
-    <input type="text" id="name" class="form-control" required/>
-    <label class="form-label" for="name">Name</label>
-  </div>
-  <div class="form-outline mb-4">
-    <input type="email" id="email" class="form-control" required/>
-    <label class="form-label" for="email">Email address</label>
-  </div>
-  <div class="form-outline mb-4">
-    <textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
-    <label class="form-label" for="message">Message</label>
-  </div>
-  <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
-</form>
-          </div>
-        </div>
-        <div class="col-md-7 d-print-none" data-aos="zoom-in" data-aos-delay="100"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6999.388162882664!2d77.19887669165045!3d28.698796413410932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdedf3f4cb07%3A0x714827a17f46f858!2sGTB%20Nagar%2C%20Delhi%2C%20110009!5e0!3m2!1sen!2sin!4v1696774585334!5m2!1sen!2sin" width="500" height="400" style="border:0;width:100%;" allowfullscreen="" loading="lazy"></iframe></div>
-      </div>
-    </div>
-  </div>
-</div></div>
-    </div>
+
+
+    <!-- Footer -->
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
-      <div class="container">
+      <div class="container ">
         <div class="my-3">
-          <div class="h4">Prashant Uniyal</div>
+          <!-- Site Title -->
+          <div class="h4">
+            Prashant Uniyal
+          </div>
+          <!-- Navigation -->
           <div class="footer-nav">
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/templateflip" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/templateflip" title="Facebook"><i class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/templateflip" title="Instagram"><i class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/templateflip" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/prashant-uniyal-9ab235273" title="Linkedin"><i class="fab fa-linkedin-in"></i><span class="menu-title sr-only">Linkedin</span></a> </li>
+        <!--    <li class="nav-item"><a class="nav-link" href="https://www.freelancer.in/u/Prashant0Uniyal" title="Freelancer"><i class="fab fa-freelancer"></i><span class="menu-title sr-only">Freelancer</span></a> </li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/templateflip" title="Twitter"><i class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a> </li> -->
+                <li class="nav-item"><a class="nav-link" href="https://github.com/mod-prashant" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
               </ul>
             </nav>
           </div>
         </div>
       </div>
     </footer>
+
+
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
     <script src="scripts/aos.js?ver=1.2.1"></script>
     <script src="scripts/main.js?ver=1.2.1"></script>
+
+    <!-- darkModeToggle -->
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        const icon = document.getElementById('darkModeIcon');
+        const body = document.body;
+        const about = document.getElementById('about'); // Select about div
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode'); // Toggle body dark mode
+
+            intro.classList.toggle('dark-mode'); // Toggle intro section
+            about.classList.toggle('dark-mode'); // Toggle about section
+            skills.classList.toggle('dark-mode'); // Toggle skills section
+            education.classList.toggle('dark-mode'); // Toggle education section
+            portfolio.classList.toggle('dark-mode'); // Toggle portfolio section
+            contact.classList.toggle('dark-mode'); // Toggle contact section
+
+            darkModeToggle.classList.toggle('dark-mode');
+            icon.classList.toggle('bi-moon-fill'); // Switch icon
+            icon.classList.toggle('bi-sun-fill');
+        });
+    </script>
   </body>
 </html>
